@@ -1,0 +1,37 @@
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 2px 16px 0px #0F233F1F;
+  position: relative;
+  z-index: 10;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
+  padding: 0 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 28px;
+  color: #2196f3;
+  letter-spacing: 1px;
+}
+
+.logoIcon {
+  font-size: 32px;
+  margin-right: 8px;
+}
+
+.logoText {
+  font-size: 28px;
+  color: #2196f3;
+  font-weight: 700;
+} 

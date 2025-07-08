@@ -1,0 +1,46 @@
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 28px;
+  color: #2196f3;
+  letter-spacing: 1px;
+}
+
+.logoIcon {
+  font-size: 32px;
+  margin-right: 8px;
+}
+
+.logoText {
+  font-size: 28px;
+  color: #2196f3;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}
+
+.menu li {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.menu li:hover {
+  color: #2196f3;
+} 

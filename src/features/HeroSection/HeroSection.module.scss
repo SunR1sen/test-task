@@ -1,18 +1,16 @@
+@import '../../styles/variables.scss';
+
 .hero {
   width: 100%;
   background: none;
-  padding: 48px 0 32px 0;
+  padding: $spacing-xxl 0 $spacing-xl 0;
 }
 
 .heroContent {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 clamp(16px, 4vw, 32px);
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(24px, 6vw, 48px);
+  gap: clamp($spacing-lg, 6vw, $spacing-xxl);
 }
 
 .heroTextCol {
@@ -21,158 +19,154 @@
   max-width: clamp(400px, 45vw, 520px);
 }
 
-.statsCol {
-  flex: 1 1 50%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
 .title {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 36px);
+  font-size: clamp($font-size-xxl, 4vw, 36px);
   font-style: normal;
   line-height: 1.2;
-  letter-spacing: 0;
-  color: #232b2b;
-  margin-bottom: clamp(16px, 3vw, 24px);
+  color: $text-color;
+  margin-bottom: clamp($spacing-md, 3vw, $spacing-lg);
 }
 
 .subtitle {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(16px, 2.5vw, 20px);
-  color: #4a4a4a;
+  font-size: $font-size-md;
+  color: $text-color;
   margin-bottom: 0;
   line-height: 1.4;
 }
 
-.statsRow {
-  display: flex;
-  gap: clamp(32px, 7vw, 42px);
-  // flex-wrap: wrap;
-  row-gap: 24px;
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
 }
 
 .statBlock {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 160px;
-  flex: 1 1 0;
-  padding: 0;
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  min-width: 0;
 }
 
 .statLabel {
   font-family: 'Noto Sans', sans-serif;
-  font-size: clamp(14px, 2vw, 16px);
-  color: #232b2b;
+  font-size: $font-size-sm;
+  color: $text-color;
   font-weight: 700;
-  margin-bottom: 8px;
   white-space: nowrap;
 }
 
 .statValue {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: clamp(22px, 3.5vw, 28px);
-  font-weight: 800;
-  color: #232b2b;
-  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.statValueNumber {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: $font-size-xxl;
+  line-height: 32px;
+  text-align: right;
   white-space: nowrap;
 }
 
+.statValuePercentage {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: $font-size-sm;
+  line-height: 24px;
+  color: $text-color;
+}
+
 .statUp {
-  color: #1ecb81;
-  font-size: clamp(15px, 2.5vw, 18px);
+  color: $success-color;
+  font-size: $font-size-xxl;
   font-weight: 700;
+  transform: translateY(-2px);
 }
 
 .statDown {
-  color: #ff4d4f;
-  font-size: clamp(15px, 2.5vw, 18px);
+  color: $error-color;
+  font-size: clamp(15px, 2.5vw, $font-size-lg);
   font-weight: 700;
 }
 
 .statDesc {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(13px, 1.8vw, 15px);
-  color: #888;
+  font-size: clamp(13px, 1.8vw, $font-size-sm);
+  color: $text-color-secondary;
   white-space: nowrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-sm) {
   .hero {
-    padding: 24px 0 16px 0;
+    padding: $spacing-lg 0 $spacing-md 0;
   }
   .heroContent {
     flex-direction: column;
     gap: 0;
-    padding: 0 12px;
+    padding: 0 $spacing-sm;
   }
   .heroTextCol {
     min-width: 0;
     max-width: 100%;
   }
   .title {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 30px;
-    margin-bottom: 16px;
+    margin-bottom: $spacing-md;
   }
   .subtitle {
-    font-size: 15px;
-    margin-bottom: 24px;
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-lg;
   }
-  .statsCol {
-    width: 100%;
-    justify-content: flex-start;
-    margin-top: 12px;
-  }
-  .statsRow {
+  .stats {
+    display: flex;
     flex-direction: column;
     gap: 0;
     width: 100%;
   }
   .statBlock {
-    min-width: 0;
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid $border-color-light;
   }
   .statBlock:last-child {
     border-bottom: none;
   }
-  .statLabel {
-    font-size: 14px;
-    margin-bottom: 4px;
+  .statLabel, .statDesc {
+    text-align: left;
   }
   .statValue {
-    font-size: 20px;
-    margin-bottom: 4px;
-  }
-  .statUp, .statDown {
-    font-size: 14px;
-  }
-  .statDesc {
-    font-size: 13px;
+    text-align: right;
   }
 }
 
-@media (max-width: 1050px) {
-  .statsRow {
-    flex-direction: column;
-    gap: 0;
-    row-gap: 0;
-    width: 100%;
+@media (max-width: $breakpoint-xl) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: $spacing-lg;
   }
-  .statBlock {
-    width: 100%;
-    min-width: 0;
+  .statBlock:nth-child(3) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
   }
-  .statBlock:last-child {
-    margin-bottom: 0;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .stats {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+  .statBlock:nth-child(3) {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: flex-start;
   }
 } 

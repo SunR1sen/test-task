@@ -11,7 +11,7 @@ const CampaignsHeader: React.FC<CampaignsHeaderProps> = ({ onCreateNew }) => {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Campaigns</h1>
+        <h2 className={styles.title}>Campaigns</h2>
         <Button
           type="default"
           icon={<PlusOutlined />}

@@ -6,6 +6,7 @@
   box-shadow: none;
   overflow: hidden;
   padding: 0;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .table {
@@ -14,18 +15,21 @@
   overflow: hidden;
   border: 1px solid $border-color;
   border-radius: $border-radius-lg;
+  font-family: 'Noto Sans', sans-serif;
   :global(.ant-table) {
     background: $background-color;
     border-radius: $border-radius-lg;
+    font-family: 'Noto Sans', sans-serif;
   }
   :global(.ant-table-thead > tr > th) {
     background: $background-color;
-    font-weight: 400;
-    color: $text-color-secondary;
+    font-weight: 700;
+    color: #232b2b;
     border-bottom: none;
     border-right: none !important;
-    font-size: $font-size-md;
+    font-size: 16px;
     padding: $spacing-md $spacing-md;
+    font-family: 'Noto Sans', sans-serif;
   }
   :global(.ant-table-thead > tr > th)::before {
     display: none !important;
@@ -35,12 +39,17 @@
   }
   :global(.ant-table-tbody > tr > td) {
     border-bottom: 1px solid $border-color-light;
-    font-size: $font-size-md;
+    font-size: 16px;
     background: $background-color;
     padding: $spacing-md $spacing-md;
+    font-family: 'Noto Sans', sans-serif;
+    color: #232b2b;
   }
   :global(.ant-table-tbody > tr:hover > td) {
     background: #f5f7fa;
+  }
+  :global(.ant-btn), :global(.anticon) {
+    font-family: 'Noto Sans', sans-serif;
   }
 }
 

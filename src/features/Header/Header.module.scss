@@ -16,6 +16,32 @@
   padding: 0 32px;
 }
 
+.desktopNav {
+  display: flex;
+}
+
+.burger {
+  display: none;
+  margin-left: 12px;
+}
+
+@media (max-width: 800px) {
+  .desktopNav {
+    display: none;
+  }
+  .burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #222;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0 4px;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HeroSection from '../../features/HeroSection';
 import CampaignsHeader from '../../features/CampaignsHeader';
 import CampaignsTable from '../../features/CampaignsTable';
 import CreateCampaignModal from '../../features/CreateCampaignModal';
@@ -17,8 +18,9 @@ const CampaignsPage: React.FC = () => {
 
   return (
     <div className={styles.page}>
-      <CampaignsHeader onCreateNew={handleCreateNew} />
       <div className={styles.container}>
+        <HeroSection />
+        <CampaignsHeader onCreateNew={handleCreateNew} />
         <CampaignsTable />
       </div>
       <CreateCampaignModal

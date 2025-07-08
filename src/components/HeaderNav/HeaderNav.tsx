@@ -1,14 +1,34 @@
 import React from 'react';
 import styles from './HeaderNav.module.scss';
+import { Divider } from 'antd';
 
-const HeaderNav: React.FC = () => (
+interface HeaderNavProps {
+  vertical?: boolean;
+}
+
+const menuItems = [
+  'Advertise',
+  'Earn',
+  'Marketplace',
+  'Stats',
+];
+
+const HeaderNav: React.FC<HeaderNavProps> = ({ vertical }) => (
   <nav className={styles.headerNav}>
-    <ul className={styles.menu}>
-      <li>Advertise</li>
-      <li>Earn</li>
-      <li>Marketplace</li>
-      <li>Stats</li>
-    </ul>
+    {vertical ? (
+      <ul className={styles.menuVertical}>
+        {menuItems.map((item, idx) => (
+          <React.Fragment key={item}>
+            <li>{item}</li>
+            {idx < menuItems.length - 1 && <Divider style={{ margin: '8px 0', background: '#e5e5e5' }} />}
+          </React.Fragment>
+        ))}
+      </ul>
+    ) : (
+      <ul className={styles.menu}>
+        {menuItems.map(item => <li key={item}>{item}</li>)}
+      </ul>
+    )}
   </nav>
 );
 

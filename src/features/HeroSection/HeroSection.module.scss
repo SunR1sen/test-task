@@ -1,0 +1,99 @@
+.hero {
+  width: 100%;
+  background: none;
+  padding: 48px 0 32px 0;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.heroTextCol {
+  flex: 1 1 50%;
+  min-width: 340px;
+  max-width: 520px;
+}
+
+.statsCol {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 44px;
+  letter-spacing: 0;
+  color: #232b2b;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #4a4a4a;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.statsRow {
+  display: flex;
+  gap: 56px;
+  flex-wrap: nowrap;
+}
+
+.statBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 180px;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.statLabel {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  color: #232b2b;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.statValue {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #232b2b;
+  margin-bottom: 8px;
+}
+
+.statUp {
+  color: #1ecb81;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.statDown {
+  color: #ff4d4f;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.statDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #888;
+} 

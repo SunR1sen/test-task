@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.statusBadge {
+  font-weight: 500;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+} 

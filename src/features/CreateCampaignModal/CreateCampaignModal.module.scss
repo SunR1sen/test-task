@@ -1,0 +1,115 @@
+@import '../../styles/variables.scss';
+
+.modal {
+  :global(.ant-modal-header) {
+    border-bottom: 1px solid $border-color-light;
+    padding: $spacing-xl $spacing-xl $spacing-md $spacing-xl;
+  }
+  :global(.ant-modal-title) {
+    font-size: $font-size-xl;
+    font-weight: 700;
+    color: $text-color;
+    letter-spacing: 0.01em;
+  }
+  :global(.ant-modal-body) {
+    padding: $spacing-xl;
+  }
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding: 0 $spacing-xl $spacing-xl $spacing-xl;
+  }
+  border-radius: $border-radius-lg;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  :global(.ant-form-item-label > label) {
+    font-weight: 600;
+    color: $text-color;
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+  }
+
+  .ratingsLabel {
+    font-weight: 600;
+    color: $text-color;
+    font-size: $font-size-md;
+    margin-bottom: $spacing-xs;
+  }
+
+  .checkboxGroup {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-md;
+  }
+
+  .checkboxGroupMobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-sm $spacing-md;
+    margin-bottom: $spacing-md;
+  }
+
+  .formButtons {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: flex-end;
+    margin-top: $spacing-lg;
+  }
+  .formButtonsMobile {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-top: $spacing-md;
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .modal {
+    :global(.ant-modal-header),
+    :global(.ant-modal-body),
+    :global(.ant-modal-footer) {
+      padding: $spacing-md;
+    }
+    border-radius: $border-radius-md;
+  }
+  .form {
+    gap: $spacing-md;
+    .checkboxGroup {
+      display: none;
+    }
+    .checkboxGroupMobile {
+      display: grid;
+    }
+    .formButtons {
+      display: none;
+    }
+    .formButtonsMobile {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-sm + 1) {
+  .form {
+    .checkboxGroup {
+      display: flex;
+    }
+    .checkboxGroupMobile {
+      display: none;
+    }
+    .formButtons {
+      display: flex;
+    }
+    .formButtonsMobile {
+      display: none;
+    }
+  }
+} 

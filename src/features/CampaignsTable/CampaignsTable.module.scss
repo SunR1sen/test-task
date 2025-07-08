@@ -1,0 +1,147 @@
+@import '../../styles/variables.scss';
+
+.campaignsTable {
+  background: $background-color;
+  border-radius: $border-radius-lg;
+  box-shadow: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.table {
+  background: $background-color;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  :global(.ant-table) {
+    background: $background-color;
+    border-radius: $border-radius-lg;
+  }
+  :global(.ant-table-thead > tr > th) {
+    background: $background-color;
+    font-weight: 400;
+    color: $text-color-secondary;
+    border-bottom: none;
+    border-right: none !important;
+    font-size: $font-size-md;
+    padding: $spacing-md $spacing-md;
+  }
+  :global(.ant-table-thead > tr > th)::before {
+    display: none !important;
+  }
+  :global(.ant-table-thead > tr > th:last-child) {
+    border-right: none !important;
+  }
+  :global(.ant-table-tbody > tr > td) {
+    border-bottom: 1px solid $border-color-light;
+    font-size: $font-size-md;
+    background: $background-color;
+    padding: $spacing-md $spacing-md;
+  }
+  :global(.ant-table-tbody > tr:hover > td) {
+    background: #f5f7fa;
+  }
+}
+
+.thText {
+  color: $text-color-secondary;
+  font-weight: 600;
+  font-size: $font-size-md;
+  user-select: none;
+}
+
+.campaignName {
+  font-weight: 400;
+  color: $primary-color;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-radius: $border-radius-sm;
+  padding: 2px 4px;
+  &:hover, &:focus {
+    background: #eaf4ff;
+    color: darken($primary-color, 10%);
+    outline: none;
+  }
+}
+
+.paymentModel {
+  color: $text-color;
+  font-weight: 400;
+  font-size: $font-size-md;
+  .paymentLink {
+    color: $primary-color;
+    image.png    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.spendings {
+  font-weight: 400;
+  color: $text-color;
+}
+
+.qIcon {
+  color: $border-color;
+  font-size: 16px;
+  margin-left: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.mobileCollapseWrapper {
+  background: $background-color;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  padding: 0;
+  margin: 0;
+}
+
+.mobileList {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.collapse {
+  background: transparent !important;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  .ant-collapse-item {
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  .ant-collapse-header {
+    border-bottom: none !important;
+    margin: 0;
+    background: $background-color;
+    padding: 0 !important;
+  }
+  .ant-collapse-content {
+    background: $background-color;
+    border-top: none;
+    margin: 0;
+    padding: 0;
+  }
+  .ant-collapse-content-box {
+    padding: $spacing-md $spacing-md $spacing-sm $spacing-md;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .table {
+    :global(.ant-table-thead > tr > th),
+    :global(.ant-table-tbody > tr > td) {
+      padding: $spacing-sm $spacing-xs;
+      font-size: $font-size-sm;
+    }
+  }
+} 

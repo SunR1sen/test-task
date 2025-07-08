@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.header {
+  background: transparent;
+  border-bottom: none;
+  padding: 0 0 $spacing-md 0;
+  margin-bottom: 0;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.title {
+  font-size: $font-size-xl;
+  font-weight: 700;
+  color: $text-color;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.createButton {
+  height: 44px;
+  padding: 0 $spacing-lg;
+  font-weight: 500;
+  border-radius: $border-radius-md;
+  background: $border-color-light;
+  color: $text-color;
+  border: none;
+  box-shadow: none;
+  transition: $transition-normal;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  &:hover, &:focus {
+    background: darken($border-color-light, 3%);
+    color: $primary-color;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .header {
+    padding: 0 0 $spacing-sm 0;
+  }
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-md;
+    padding: 0 $spacing-sm;
+  }
+  .title {
+    font-size: $font-size-lg;
+  }
+  .createButton {
+    width: 100%;
+    justify-content: center;
+  }
+} 

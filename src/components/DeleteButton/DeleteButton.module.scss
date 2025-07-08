@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.deleteButton {
+  color: $error-color;
+  transition: $transition-fast;
+  
+  &:hover {
+    color: darken($error-color, 10%);
+    background-color: rgba($error-color, 0.1);
+  }
+  
+  &:focus {
+    color: $error-color;
+  }
+} 

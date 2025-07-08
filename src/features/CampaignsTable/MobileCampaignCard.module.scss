@@ -29,8 +29,8 @@
 
 .expandIcon {
   color: $text-color-secondary;
-  font-size: 16px;
-  transition: transform 0.2s;
+  font-size: $font-size-md;
+  transition: $transition-fast;
   transform: rotate(90deg);
   // margin-left: $spacing-md;
   align-self: center;
@@ -50,19 +50,19 @@
 .infoRow {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
-  color: #232b2b;
+  font-size: $font-size-md;
+  color: $text-color;
   margin-bottom: 2px;
   font-family: 'Noto Sans', sans-serif;
   
   b {
     font-weight: 700;
-    color: #888;
+    color: $text-color-secondary;
     font-family: 'Noto Sans', sans-serif;
   }
   
   .value {
-    color: #232b2b;
+    color: $text-color;
     font-weight: 400;
     font-family: 'Noto Sans', sans-serif;
   }
@@ -79,7 +79,7 @@
 }
 
 .statusBadge {
-  margin: 4px 0 12px 0;
+  margin: $spacing-xs 0 $spacing-sm 0;
 }
 
 div.actionRow {
@@ -96,10 +96,9 @@ div.actionRow {
   margin-right: $spacing-xs;
   font-weight: 400;
   background: $border-color-light !important;
-  color: $text-color-secondary !important;
-  border: none !important;
+  color: $text-color !important;
   box-shadow: none !important;
-  cursor: not-allowed;
+  cursor: pointer;
   text-align: left;
   font-family: 'Noto Sans', sans-serif;
 } 

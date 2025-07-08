@@ -1,5 +1,4 @@
 import React from 'react';
-import { Tag } from 'antd';
 import type { CampaignStatus } from '../../types/campaign';
 import styles from './StatusBadge.module.scss';
 
@@ -7,41 +6,17 @@ interface StatusBadgeProps {
   status: CampaignStatus;
 }
 
+const statusColorMap = {
+  active: styles.active,
+  paused: styles.paused,
+  warning: styles.warning,
+};
+
 const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
-  const getStatusConfig = (status: CampaignStatus) => {
-    switch (status) {
-      case 'active':
-        return {
-          color: 'success',
-          text: 'Active'
-        };
-      case 'paused':
-        return {
-          color: 'error',
-          text: 'Paused'
-        };
-      case 'warning':
-        return {
-          color: 'warning',
-          text: 'Warning'
-        };
-      default:
-        return {
-          color: 'default',
-          text: 'Unknown'
-        };
-    }
-  };
-
-  const config = getStatusConfig(status);
-
+  const colorClass = statusColorMap[status] || styles.unknown;
+  const text = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
   return (
-    <Tag 
-      color={config.color}
-      className={styles.statusBadge}
-    >
-      {config.text}
-    </Tag>
+    <span className={`${styles.statusBadge} ${colorClass}`}>{text}</span>
   );
 };
 

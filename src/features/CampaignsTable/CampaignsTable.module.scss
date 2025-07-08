@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .campaignsTable {
-  background: $background-color;
+  background: $background-color-light;
   border-radius: $border-radius-lg;
   box-shadow: none;
   overflow: hidden;
@@ -9,25 +9,30 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
+.triangle {
+  color: $text-color-secondary;
+  font-size: $font-size-md;
+}
+
 .table {
-  background: $background-color;
+  background: $background-color-light;
   border-radius: $border-radius-lg;
   overflow: hidden;
   border: 1px solid $border-color;
   border-radius: $border-radius-lg;
   font-family: 'Noto Sans', sans-serif;
   :global(.ant-table) {
-    background: $background-color;
+    background: $background-color-light;
     border-radius: $border-radius-lg;
     font-family: 'Noto Sans', sans-serif;
   }
   :global(.ant-table-thead > tr > th) {
-    background: $background-color;
+    background: $background-color-light;
     font-weight: 700;
-    color: #232b2b;
+    color: $text-color;
     border-bottom: none;
     border-right: none !important;
-    font-size: 16px;
+    font-size: $font-size-md;
     padding: $spacing-md $spacing-md;
     font-family: 'Noto Sans', sans-serif;
   }
@@ -39,11 +44,11 @@
   }
   :global(.ant-table-tbody > tr > td) {
     border-bottom: 1px solid $border-color-light;
-    font-size: 16px;
-    background: $background-color;
+    font-size: $font-size-md;
+    background: $background-color-light;
     padding: $spacing-md $spacing-md;
     font-family: 'Noto Sans', sans-serif;
-    color: #232b2b;
+    color: $text-color;
   }
   :global(.ant-table-tbody > tr:hover > td) {
     background: #f5f7fa;
@@ -64,9 +69,9 @@
   font-weight: 400;
   color: $primary-color;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: $transition-fast;
   border-radius: $border-radius-sm;
-  padding: 2px 4px;
+  padding: 2px $spacing-xs;
   &:hover, &:focus {
     background: #eaf4ff;
     color: darken($primary-color, 10%);
@@ -92,9 +97,8 @@
 }
 
 .qIcon {
-  color: $border-color;
-  font-size: 16px;
-  margin-left: 4px;
+  color: $text-color-secondary;
+  font-size: $font-size-lg;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -102,7 +106,7 @@
 .mobileCollapseWrapper {
   background: $background-color;
   border-radius: $border-radius-lg;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  box-shadow: $shadow-sm;
   padding: 0;
   margin: 0;
 }
@@ -145,7 +149,7 @@
   }
 }
 
-@media (max-width: $breakpoint-md) {
+@media (max-width: $breakpoint-lg) {
   .table {
     :global(.ant-table-thead > tr > th),
     :global(.ant-table-tbody > tr > td) {

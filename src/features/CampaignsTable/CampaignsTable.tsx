@@ -5,13 +5,13 @@ import { useCampaignsStore } from '../../store/campaignsStore';
 import StatusBadge from '../../components/StatusBadge';
 import DeleteButton from '../../components/DeleteButton';
 import { MobileCampaignCard, MobileCampaignHeader } from './index';
-import { QuestionCircleOutlined } from '@ant-design/icons';
+import { QuestionCircleOutlined, CaretDownOutlined } from '@ant-design/icons';
 import styles from './CampaignsTable.module.scss';
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = React.useState(false);
   React.useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth <= 600);
+    const check = () => setIsMobile(window.innerWidth <= 768);
     check();
     window.addEventListener('resize', check);
     return () => window.removeEventListener('resize', check);
@@ -21,7 +21,7 @@ function useIsMobile() {
 
 const popoverText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod.';
 
-const Triangle = () => <span className={styles.triangle}>▼</span>;
+
 
 const CampaignsTable: React.FC = () => {
   const { getFilteredCampaigns, deleteCampaign } = useCampaignsStore();
@@ -63,7 +63,7 @@ const CampaignsTable: React.FC = () => {
 
   const columns = [
     {
-      title: <span className={styles.thText}>Campaign <Triangle /></span>,
+      title: <span className={styles.thText}>Campaign <CaretDownOutlined className={styles.triangle} /></span>,
       dataIndex: 'name',
       key: 'name',
       render: (text: string) => (
@@ -73,13 +73,13 @@ const CampaignsTable: React.FC = () => {
       ),
     },
     {
-      title: <span className={styles.thText}>Status <Triangle /></span>,
+      title: <span className={styles.thText}>Status <CaretDownOutlined className={styles.triangle} /></span>,
       dataIndex: 'status',
       key: 'status',
       render: (status: string) => <StatusBadge status={status as any} />,
     },
     {
-      title: <span className={styles.thText}>Payment model <Triangle /></span>,
+      title: <span className={styles.thText}>Payment model <CaretDownOutlined className={styles.triangle} /></span>,
       dataIndex: 'paymentModel',
       key: 'paymentModel',
       render: () => (
@@ -95,7 +95,7 @@ const CampaignsTable: React.FC = () => {
           <Popover content={popoverText} placement="top">
             <QuestionCircleOutlined className={styles.qIcon} />
           </Popover>
-          <Triangle />
+          <CaretDownOutlined className={styles.triangle} />
         </span>
       ),
       dataIndex: 'spendings',
@@ -109,7 +109,7 @@ const CampaignsTable: React.FC = () => {
           <Popover content={popoverText} placement="top">
             <QuestionCircleOutlined className={styles.qIcon} />
           </Popover>
-          <Triangle />
+          <CaretDownOutlined className={styles.triangle} />
         </span>
       ),
       dataIndex: 'impressions',
@@ -123,7 +123,7 @@ const CampaignsTable: React.FC = () => {
           <Popover content={popoverText} placement="top">
             <QuestionCircleOutlined className={styles.qIcon} />
           </Popover>
-          <Triangle />
+          <CaretDownOutlined className={styles.triangle} />
         </span>
       ),
       dataIndex: 'clicks',
@@ -137,7 +137,7 @@ const CampaignsTable: React.FC = () => {
           <Popover content={popoverText} placement="top">
             <QuestionCircleOutlined className={styles.qIcon} />
           </Popover>
-          <Triangle />
+          <CaretDownOutlined className={styles.triangle} />
         </span>
       ),
       dataIndex: 'ctr',

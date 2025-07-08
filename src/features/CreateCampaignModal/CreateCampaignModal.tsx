@@ -63,7 +63,7 @@ const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({ visible, onCl
       className={styles.modal}
       footer={null}
     >
-      <Form form={form} layout="vertical" className={styles.form}>
+      <Form form={form} layout="vertical" className={styles.form} requiredMark={false}>
         <Form.Item
           name="name"
           label="Campaign name"
@@ -82,7 +82,6 @@ const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({ visible, onCl
           <Select placeholder="Choose language" options={languageOptions} />
         </Form.Item>
         <div className={styles.ratingsLabel}>Ratings</div>
-        {/* Desktop: чекбоксы в одну строку, Mobile: две строки по две */}
         <div className={styles.checkboxGroup}>
           <Checkbox.Group>
             {tagOptions.map((tag) => (
@@ -92,27 +91,9 @@ const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({ visible, onCl
             ))}
           </Checkbox.Group>
         </div>
-        <div className={styles.checkboxGroupMobile}>
-          <Checkbox.Group>
-            {tagOptions.map((tag) => (
-              <Checkbox key={tag.value} value={tag.value}>
-                {tag.label}
-              </Checkbox>
-            ))}
-          </Checkbox.Group>
-        </div>
-        {/* Кнопки */}
         <div className={styles.formButtons}>
           <Button onClick={handleCancel}>Cancel</Button>
           <Button type="primary" onClick={handleSubmit} loading={loading} htmlType="submit">
-            Create Campaign
-          </Button>
-        </div>
-        <div className={styles.formButtonsMobile}>
-          <Button onClick={handleCancel} size="large">
-            Cancel
-          </Button>
-          <Button type="primary" onClick={handleSubmit} loading={loading} size="large" htmlType="submit">
             Create Campaign
           </Button>
         </div>

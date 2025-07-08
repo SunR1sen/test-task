@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Popconfirm } from 'antd';
-import { DeleteOutlined } from '@ant-design/icons';
+import { DeleteTwoTone } from '@ant-design/icons';
 import styles from './DeleteButton.module.scss';
 
 interface DeleteButtonProps {
@@ -25,9 +25,9 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({
     >
       <Button
         type="text"
-        icon={<DeleteOutlined />}
+        icon={<DeleteTwoTone twoToneColor="#00acfb" />}
         className={styles.deleteButton}
-        danger
+        danger={false}
       />
     </Popconfirm>
   );

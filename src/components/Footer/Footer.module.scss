@@ -1,0 +1,122 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  width: 100%;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  border-top: 1px solid $border-color-light;
+}
+
+.footerNavSection {
+  width: 100%;
+}
+
+.footerMenu {
+  display: flex;
+  gap: $spacing-xxl;
+  list-style: none;
+  margin: 0;
+  padding: $spacing-lg 0 $spacing-md 0;
+  font-size: $font-size-xl;
+  font-weight: 700;
+  color: $text-color;
+  justify-content: center;
+}
+
+.footerMenu li {
+  cursor: pointer;
+  transition: $transition-fast;
+}
+.footerMenu li:hover {
+  color: $primary-color;
+}
+
+.footerBottomSection {
+  width: 100%;
+  max-width: $breakpoint-xl;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-xl $spacing-md $spacing-xl;
+  font-size: $font-size-md;
+  color: $text-color-secondary;
+  background: #f5f7fa;
+  flex-wrap: wrap;
+}
+
+.footerCopyright {
+  font-size: $font-size-md;
+  color: $text-color-secondary;
+  text-align: left;
+}
+
+.footerLinks {
+  display: flex;
+  gap: $spacing-lg;
+  font-size: $font-size-md;
+  color: $text-color-secondary;
+}
+
+.footerLink {
+  color: $text-color-secondary;
+  text-decoration: none;
+  transition: $transition-fast;
+}
+.footerLink:hover {
+  color: $primary-color;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .footerBottomSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-sm;
+    padding: $spacing-md $spacing-md $spacing-md $spacing-md;
+  }
+  .footerLinks {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .footerMenu {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+    font-size: $font-size-lg;
+  }
+  .footerMenu li {
+    padding: $spacing-md 0 $spacing-md $spacing-lg;
+    border-bottom: 1px solid $border-color-light;
+    width: 100%;
+  }
+  .footerMenu li:last-child {
+    border-bottom: none;
+  }
+  .footerNavSection {
+    border-top: 1px solid $border-color-light;
+    border-bottom: none;
+    background: #f5f7fa;
+    justify-content: flex-start;
+  }
+  .footerBottomSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-xs;
+    padding: $spacing-sm $spacing-sm $spacing-md $spacing-sm;
+    font-size: $font-size-sm;
+  }
+  .footerCopyright {
+    font-size: $font-size-sm;
+    text-align: left;
+  }
+  .footerLinks {
+    font-size: $font-size-sm;
+    gap: $spacing-md;
+  }
+} 

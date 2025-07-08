@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .header {
   width: 100%;
   background: #fff;
@@ -10,10 +12,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: $breakpoint-xl;
   margin: 0 auto;
-  height: 64px;
-  padding: 0 32px;
+  height: 90px;
+  padding: 0 $spacing-xl;
 }
 
 .desktopNav {
@@ -22,10 +24,19 @@
 
 .burger {
   display: none;
-  margin-left: 12px;
+  margin-left: $spacing-sm;
 }
 
-@media (max-width: 800px) {
+.logoIcon {
+  width: 44px;
+  height: 44px;
+}
+
+@media (max-width: $breakpoint-lg) {
+  .headerContent {
+    height: 76px;
+  }
+
   .desktopNav {
     display: none;
   }
@@ -33,12 +44,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
-    color: #222;
+    font-size: $font-size-xxl;
+    color: $text-color;
     background: none;
     border: none;
     box-shadow: none;
-    padding: 0 4px;
+    padding: 0 $spacing-xs;
   }
 }
 
@@ -46,18 +57,29 @@
   display: flex;
   align-items: center;
   font-weight: 700;
-  font-size: 28px;
-  color: #2196f3;
+  font-size: $font-size-xxl;
+  color: $primary-color;
   letter-spacing: 1px;
 }
 
 .logoIcon {
-  font-size: 32px;
-  margin-right: 8px;
+  font-size: $spacing-xl;
+  margin-right: $spacing-sm;
 }
 
 .logoText {
-  font-size: 28px;
-  color: #2196f3;
+  font-size: $font-size-xxl;
   font-weight: 700;
+  background: linear-gradient(180deg, #4DD1F6 0%, #0381F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px; // уменьшает расстояние между буквами
+  font-stretch: condensed; // если поддерживается шрифтом
+}
+
+@media (max-width: $breakpoint-lg) {
+  .logoText {
+    display: none;
+  }
 } 

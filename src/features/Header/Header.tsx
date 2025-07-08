@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import HeaderNav from '../../components/HeaderNav';
-import styles from './Header.module.scss';
 import { Drawer, Button } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import logo from '../../assets/aads-logo.svg';
+import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -10,7 +11,7 @@ const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <div className={styles.logo}>
-          <span className={styles.logoIcon}>🅰️</span>
+          <img src={logo} alt="AADS Logo" className={styles.logoIcon}/>
           <span className={styles.logoText}>ADS</span>
         </div>
         <div className={styles.desktopNav}>

@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .headerNav {
   display: flex;
   align-items: center;
@@ -10,59 +12,60 @@
   display: flex;
   align-items: center;
   font-weight: 700;
-  font-size: 28px;
-  color: #2196f3;
+  font-size: $font-size-xxl;
+  color: $primary-color;
   letter-spacing: 1px;
 }
 
 .logoIcon {
-  font-size: 32px;
-  margin-right: 8px;
+  font-size: $spacing-xl;
+  margin-right: $spacing-sm;
 }
 
 .logoText {
-  font-size: 28px;
-  color: #2196f3;
+  font-size: $font-size-xxl;
+  color: $primary-color;
   font-weight: 700;
 }
 
 .menu {
+  font-family: 'Noto Sans', sans-serif;
   display: flex;
-  gap: 32px;
+  gap: $spacing-xl;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  color: #222;
+  font-size: $font-size-md;
+  font-weight: 700;
+  color: $text-color;
 }
 
 .menu li {
   cursor: pointer;
-  transition: color 0.2s;
+  transition: $transition-fast;
 }
 .menu li:hover {
-  color: #2196f3;
+  color: $primary-color;
 }
 
 .menuVertical {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 24px 0 16px 0;
+  padding: $spacing-lg 0 $spacing-md 0;
   margin: 200px 0 0 0;
   list-style: none;
   width: 100%;
 }
 .menuVertical li {
-  font-size: 18px;
+  font-size: $font-size-lg;
   font-weight: 500;
-  color: #222;
-  padding: 8px 24px;
+  color: $text-color;
+  padding: $spacing-sm $spacing-lg;
   width: 100%;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: $transition-fast;
 }
 .menuVertical li:hover {
-  color: #2196f3;
+  color: $primary-color;
 } 

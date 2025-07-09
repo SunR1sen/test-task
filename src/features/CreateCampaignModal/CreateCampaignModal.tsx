@@ -62,6 +62,7 @@ const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({ visible, onCl
       width={480}
       className={styles.modal}
       footer={null}
+      destroyOnHidden={true}
     >
       <Form form={form} layout="vertical" className={styles.form} requiredMark={false}>
         <Form.Item

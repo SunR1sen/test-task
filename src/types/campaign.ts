@@ -8,6 +8,10 @@ export interface Campaign {
   status: CampaignStatus;
   language: CampaignLanguage;
   tags: CampaignTag[];
+  budget?: number;
+  startDate?: string;
+  endDate?: string;
+  description?: string;
 }
 
 export type CampaignTag = 'gambling' | 'investments' | 'adults' | 'risky';

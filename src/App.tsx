@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from './layouts/Layout';
 import './styles/global.scss';
 import CampaignsPage from './pages/CampaignsPage';

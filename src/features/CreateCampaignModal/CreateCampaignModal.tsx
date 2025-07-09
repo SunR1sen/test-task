@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Form, Input, Select, Checkbox, Button, message } from 'antd';
-import type { CreateCampaignData, CampaignLanguage, CampaignTag } from '../../types/campaign';
+import type { CreateCampaignData, CampaignTag } from '../../types/campaign';
 import { useCampaignsStore } from '../../store/campaignsStore';
 import styles from './CreateCampaignModal.module.scss';
 

@@ -1,8 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Campaign, CampaignStatus, CreateCampaignData } from '../types/campaign';
-
-// Моковые данные для начального состояния
 const mockCampaigns: Campaign[] = [
   {
     id: '1',

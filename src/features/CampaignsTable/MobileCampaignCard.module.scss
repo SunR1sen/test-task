@@ -1,6 +1,4 @@
 @import '../../styles/variables.scss';
-
-// Кастомный header для мобильного Collapse
 .mobileHeader {
   width: 100%;
   display: flex;
@@ -38,8 +36,6 @@
     transform: rotate(-90deg);
   }
 }
-
-// Стили для содержимого карточки
 .body {
   display: flex;
   flex-direction: column;

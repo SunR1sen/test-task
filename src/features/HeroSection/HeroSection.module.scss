@@ -89,13 +89,14 @@
 
 .statDown {
   color: $error-color;
-  font-size: clamp(15px, 2.5vw, $font-size-lg);
+  font-size: $font-size-xxl;
   font-weight: 700;
+  transform: translateY(-2px);
 }
 
 .statDesc {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(13px, 1.8vw, $font-size-sm);
+  font-size: $font-size-sm;
   color: $text-color-secondary;
   white-space: nowrap;
 }

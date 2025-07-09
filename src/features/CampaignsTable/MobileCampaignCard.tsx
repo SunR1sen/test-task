@@ -12,7 +12,6 @@ interface MobileCampaignCardProps {
   isActive?: boolean;
 }
 
-// Header Collapse: название и под ним статус, стрелка справа
 export const MobileCampaignHeader: React.FC<{ 
   campaign: Campaign; 
   isActive?: boolean;
@@ -26,7 +25,6 @@ export const MobileCampaignHeader: React.FC<{
   </div>
 );
 
-// Внутри панели: статус, инфо, кнопка и корзина
 const MobileCampaignCard: React.FC<MobileCampaignCardProps> = ({ campaign, onDelete }) => {
   return (
     <div className={styles.body}>

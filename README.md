@@ -1,5 +1,7 @@
 Тестовое задание для Aads.
 
+🌐 **Демо:** [https://test-task-sunr1sen.netlify.app/](https://test-task-sunr1sen.netlify.app/)
+
 ## 🚀 Технологии
 
 - **React 18** + **TypeScript**

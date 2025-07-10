@@ -1,35 +1,35 @@
-Тестовое задание для Aads.
+Test task for AADS.
 
-🌐 **Демо:** [https://test-task-sunr1sen.netlify.app/](https://test-task-sunr1sen.netlify.app/)
+Demo: [https://test-task-sunr1sen.netlify.app/](https://test-task-sunr1sen.netlify.app/)
 
-## 🚀 Технологии
+## Technologies
 
 - **React 18** + **TypeScript**
-- **Vite** — быстрый сборщик
-- **Zustand** — управление состоянием
-- **Ant Design** — UI-компоненты и иконки
-- **SCSS** — модульные стили, переменные
+- **Vite** - build tool
+- **Zustand** - state management
+- **Ant Design** - UI components and icons
+- **SCSS** - modular styles and variables
 
-## 📁 Структура
+## Project Structure
 
 ```
 src/
-├── components/          # Переиспользуемые компоненты (Footer, HeaderNav, StatusBadge, DeleteButton)
-├── features/            # Крупные блоки (HeroSection, CampaignsTable, CampaignsHeader, CreateCampaignModal, Header)
-├── layouts/             # Layout компоненты
-├── pages/               # Страницы приложения
+├── components/          # Reusable components
+├── features/            # Feature blocks
+├── layouts/             # Layout components
+├── pages/               # Application pages
 ├── store/               # Zustand store
-├── styles/              # Глобальные и переменные SCSS
-└── types/               # Типы TypeScript
+├── styles/              # Global and variable SCSS
+└── types/               # TypeScript types
 ```
 
-## 🎯 Функциональность
-- Просмотр, фильтрация, создание и удаление кампаний
-- Адаптивный дизайн (гриды, крупные чекбоксы, мобильная модалка)
-- Сохранение данных в localStorage
-- Базовая валидация формы
+## Features
+- View, filter, create and delete campaigns
+- Responsive design (grids, large checkboxes, mobile modal)
+- Data persistence in localStorage
+- Basic form validation
 
-## 🛠 Установка и запуск
+## Installation and Setup
 
 ```bash
 git clone <repository-url>
@@ -38,10 +38,10 @@ npm install
 npm run dev
 ```
 
-## 💡 Разработка
-- Используйте переменные из `src/styles/variables.scss`
-- Следуйте структуре conventional commits (feat:, fix:, refactor:, chore: ...)
-- Все стили — через SCSS-модули, без глобальных margin/padding
+## Development Guidelines
+- Use variables from `src/styles/variables.scss`
+- Follow conventional commits structure (feat:, fix:, refactor:, chore: ...)
+- All styles through SCSS modules, no global margin/padding
 
-## 📄 Лицензия
+## License
 MIT License
